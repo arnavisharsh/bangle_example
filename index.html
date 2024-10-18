@@ -11,7 +11,8 @@
       Puck.write('require("Storage").write("a_file", "Hello World")\n')
     }
     function readFile(){
-      Puck.eval('require("Storage").read("settings.json")', function(data){
+      Puck.eval('require("Storage").read("settings.JSON")', function(data){
+        console.log(data)
         document.getElementById("contents").innerHTML = JSON.stringify(data);
       });
     }
